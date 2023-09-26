@@ -1,13 +1,15 @@
-import Script from "next/script"
 import Posts from "./Posts"
 import ImageSlider from "./components/Carousel"
-import Feedback from "./components/Feedback"
-import Gallery from "./components/Gallery"
 import NavBar from "./components/NavBar"
 import Services from "./components/Services"
-import Head from "next/head"
 import Footer from "./components/Footer"
-
+import dynamic from "next/dynamic"
+const Feedback = dynamic(()=>import("./components/Feedback"),{
+  ssr: false,
+});
+const Gallery = dynamic(()=>import("./components/Gallery"),{
+  ssr: false,
+})
 export default function Home() {
   return (
     <div>

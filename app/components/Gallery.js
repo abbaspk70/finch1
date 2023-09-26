@@ -57,7 +57,7 @@ export default function Gallery() {
     // store the filter keyword in a state
     const [filterKey, setFilterKey] = useState('*')
 
-
+    if(typeof window !== 'undefined' && window) {
     // initialize an Isotope object with configs
     useEffect(() => {
         isotope.current = new Isotope('.items', {
@@ -78,7 +78,7 @@ export default function Gallery() {
             ? isotope.current.arrange({ filter: `*` })
             : isotope.current.arrange({ filter: `.${filterKey}` })
     }, [filterKey])
-
+}
     const handleFilterKeyChange = (key, i) => {
         setFilterKey(key);
         setIndex(i);

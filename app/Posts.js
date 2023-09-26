@@ -17,7 +17,7 @@ export default function Posts() {
                 <div className='row latest-blog' data-isotope='{ "itemSelector": ".post", "layoutMode": "fitRows" }'>
                     {postsData.map((item, index)=> {
                         return (
-                            <div className='post col-sm-12 col-md-6'>
+                            <div key={index} className='post col-sm-12 col-md-6'>
                                 <div className='row'>
                                     <div className='col-sm-4'>
                                         <figure className='icon-overlay'>
