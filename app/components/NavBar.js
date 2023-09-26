@@ -5,11 +5,12 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import NavbarBrand from 'react-bootstrap/NavbarBrand'
+if (typeof window !== "undefined") {
+  //client side only code
+  window.$ = window.jQuery = require("jquery");
+}
 
-
-import { useRef, useState } from 'react';
-import Image from 'next/image';
-import NavbarToggle from 'react-bootstrap/esm/NavbarToggle';
+import {  useState } from 'react';
 import Script from 'next/script';
 
 const navData = [
@@ -42,10 +43,13 @@ const navData = [
 
 export default function NavBar() {
   const [stickyNav, setStickyNav] = useState(false);
+  if (typeof window !== 'undefined') {
   window.onscroll = function() {handleScroll()};
-  var stickyContainer = document.getElementById("basic-navbar-nav");
-  const sticky = stickyContainer;
 
+  if (typeof document !== 'undefined') {
+  var stickyContainer = document.getElementById("basic-navbar-nav");
+  }
+  const sticky = stickyContainer;
     const handleScroll = () => {
       if (window.pageYOffset > 250) { 
         setStickyNav(true);
@@ -54,7 +58,8 @@ export default function NavBar() {
         setStickyNav(false);
        }
 
-    };
+    }
+  };
   return (
     <div className='block block--photography-menu'>
     <div className='container-fluid g-0 '>

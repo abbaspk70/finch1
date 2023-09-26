@@ -51,11 +51,12 @@ const breadCrumbData = [
 export default function Gallery() {
     // active link
     const [index, setIndex] = useState(0)
-
+    
     // init one ref to store the future isotope object
     const isotope = useRef()
     // store the filter keyword in a state
     const [filterKey, setFilterKey] = useState('*')
+
 
     // initialize an Isotope object with configs
     useEffect(() => {
@@ -82,7 +83,7 @@ export default function Gallery() {
         setFilterKey(key);
         setIndex(i);
     }
-
+    
     return (
 
         <section className=''>
