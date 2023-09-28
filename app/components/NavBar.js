@@ -4,7 +4,8 @@ import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
-import NavbarBrand from 'react-bootstrap/NavbarBrand'
+import Logo from '@/public/logo@2x.png'
+
 if (typeof window !== "undefined") {
   //client side only code
   window.$ = window.jQuery = require("jquery");
@@ -64,13 +65,13 @@ export default function NavBar() {
     <div className='block block--photography-menu'>
     <div className='container-fluid g-0 '>
       <header className=' top d-none d-sm-block'>
-        <img src="/logo@2x.png" width={55} alt='finch'/>
+        <img src={Logo.src} width={55} alt='finch'/>
       </header>
     <section>
     <Navbar expand="sm" className="bg-primary">
     <Container fluid>
       <Navbar.Brand className=' d-sm-none ' href="#home">
-        <img src="/logo@2x.png" width={50}/>
+        <img src={Logo.src} width={50}/>
       </Navbar.Brand>
       <Navbar.Toggle className='' children={<i></i>} aria-controls="basic-navbar-nav" />
       <Navbar.Collapse className={`w-100 ${stickyNav && 'fixed bg-opacity-100'}`} id="basic-navbar-nav">

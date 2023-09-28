@@ -3,40 +3,51 @@ import { Fragment, useState, useEffect, useRef } from 'react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import React from 'react';
 import Isotope from 'isotope-layout';
+import P1 from '@/public/gallery/p1.jpeg';
+import P2 from '@/public/gallery/p2.jpeg';
+import P3 from '@/public/gallery/p3.jpeg';
+import P4 from '@/public/gallery/p4.jpeg';
+import P5 from '@/public/gallery/p5.jpeg';
+import P6 from '@/public/gallery/p6.jpeg';
+import P7 from '@/public/gallery/p7.jpeg';
+import P8 from '@/public/gallery/p8.jpeg';
+import P9 from '@/public/gallery/p9.jpeg';
+import P10 from '@/public/gallery/p10.jpeg';
+import P11 from '@/public/gallery/p11.jpeg';
 
 const galleryData = [
     {
-        imgUrl: '/gallery/p1.jpeg', category: 'web', title: 'Fringilla Fermentum Sem', url: '/', style: ['item', 'grid-item--width2', 'grid-item--height2',]
+        imgUrl: P1.src, category: 'web', title: 'Fringilla Fermentum Sem', url: '/', style: ['item', 'grid-item--width2', 'grid-item--height2',]
     },
     {
-        imgUrl: '/gallery/p2.jpeg', category: 'graphic', title: 'Vestibulum Tellus', url: '/', style: ['item']
+        imgUrl: P2.src, category: 'graphic', title: 'Vestibulum Tellus', url: '/', style: ['item']
     },
     {
-        imgUrl: '/gallery/p3.jpeg', category: 'web', title: 'Etiam Quam', url: '/', style: ['item', 'grid-item--height2']
+        imgUrl: P3.src, category: 'web', title: 'Etiam Quam', url: '/', style: ['item', 'grid-item--height2']
     },
     {
-        imgUrl: '/gallery/p4.jpeg', category: 'motion', title: 'Consectetur Justo', url: '/', style: ['item',]
+        imgUrl: P4.src, category: 'motion', title: 'Consectetur Justo', url: '/', style: ['item',]
     },
     {
-        imgUrl: '/gallery/p5.jpeg', category: 'web', title: 'Etiam Quam', url: '/', style: ['item', 'grid-item--height2']
+        imgUrl: P5.src, category: 'web', title: 'Etiam Quam', url: '/', style: ['item', 'grid-item--height2']
     },
     {
-        imgUrl: '/gallery/p6.jpeg', category: 'photography', title: 'Fusce Ornare Lorem', url: '/', style: ['item']
+        imgUrl: P6.src, category: 'photography', title: 'Fusce Ornare Lorem', url: '/', style: ['item']
     },
     {
-        imgUrl: '/gallery/p7.jpeg', category: 'web', title: 'Sit Amet Ridiculus', url: '/', style: ['item']
+        imgUrl: P7.src, category: 'web', title: 'Sit Amet Ridiculus', url: '/', style: ['item']
     },
     {
-        imgUrl: '/gallery/p8.jpeg', category: 'graphic', title: 'Malesuada Dolor Nibh', url: '/', style: ['item', 'grid-item--height2']
+        imgUrl: P8.src, category: 'graphic', title: 'Malesuada Dolor Nibh', url: '/', style: ['item', 'grid-item--height2']
     },
     {
-        imgUrl: '/gallery/p9.jpeg', category: 'motion', title: 'Ridiculus Lorem Consectetur', url: '/', style: ['item', 'grid-item--width2', 'grid-item--height2']
+        imgUrl: P9.src, category: 'motion', title: 'Ridiculus Lorem Consectetur', url: '/', style: ['item', 'grid-item--width2', 'grid-item--height2']
     },
     {
-        imgUrl: '/gallery/p10.jpeg', category: 'graphic', title: 'Bibendum Purus', url: '/', style: ['item',]
+        imgUrl: P10.src, category: 'graphic', title: 'Bibendum Purus', url: '/', style: ['item',]
     },
     {
-        imgUrl: '/gallery/p11.jpeg', category: 'photography', title: 'Pellentesque Etiam Egestas', url: '/', style: ['item',]
+        imgUrl: P11.src, category: 'photography', title: 'Pellentesque Etiam Egestas', url: '/', style: ['item',]
     },
 ]
 const breadCrumbData = [

@@ -1,11 +1,16 @@
 import Script from 'next/script'
 import React from 'react'
 
+import b1 from '@/public/posts/b1.jpeg';
+import b2 from '@/public/posts/b2.jpeg';
+import b3 from '@/public/posts/b3.jpeg';
+import b4 from '@/public/posts/b4.jpeg';
+
 const postsData = [
-    {img: '/posts/b1.jpeg', title: 'Adipiscing Mollis Inceptos',body:'Aenean leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor.', date: '13 Nov, 2012', comments: '3'},
-    {img: '/posts/b2.jpeg', title: 'Ridiculus Ultricies Pellentesque',body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo.', date: '14 Dec, 2014', comments: '3'},
-    {img: '/posts/b3.jpeg', title: 'Tristique Purus Pharetra',body:'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum', date: '25 April, 2015', comments: '5'},
-    {img: '/posts/b4.jpeg', title: 'Inceptos Porta Nibh',body:'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.', date: '08 March, 2011', comments: '2'},
+    {img: b1.src, title: 'Adipiscing Mollis Inceptos',body:'Aenean leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Curabitur blandit tempus porttitor.', date: '13 Nov, 2012', comments: '3'},
+    {img: b2.src, title: 'Ridiculus Ultricies Pellentesque',body:'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna. Fusce dapibus, tellus ac cursus commodo.', date: '14 Dec, 2014', comments: '3'},
+    {img: b3.src, title: 'Tristique Purus Pharetra',body:'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum', date: '25 April, 2015', comments: '5'},
+    {img: b4.src, title: 'Inceptos Porta Nibh',body:'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.', date: '08 March, 2011', comments: '2'},
 ]
 
 export default function Posts() {

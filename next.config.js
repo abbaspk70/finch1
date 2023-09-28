@@ -13,6 +13,9 @@ const nextConfig = {
     );
     return config;
    },
+
+    assetPrefix: ".",
+    
    output: 'export',
 };
 

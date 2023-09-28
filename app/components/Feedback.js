@@ -8,6 +8,8 @@ import OwlCarousel from 'react-owl-carousel';
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 
+import bgImage from '@/public/bgTestimonial/parallax2.jpeg'
+
 const feedbackData = [
     { user: ' Tristique Purus Pharetra ', comment: 'Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Etiam porta sem malesuada magna mollis euismod. Cras mattis consectetur purus sit amet fermentum' },
     { user: ' Inceptos Porta Nibh ', comment: 'Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Curabitur blandit tempus porttitor. Cras justo odio, dapibus ac facilisis in, egestas eget quam.' },
@@ -20,7 +22,7 @@ export default function Feedback() {
 
     return (
         <section className='d-block'>
-            <div className=' parallax customers py-3 py-md-5' style={{backgroundImage:"url('/bgTestimonial/parallax2.jpeg')"}}>
+            <div className=' parallax customers py-3 py-md-5' style={{background:`url(${bgImage.src}) fixed no-repeat center center`}}>
             <div className='container text-center px-1 px-md-5 '>
                 <h3 className='section-title'>what our customers think about us</h3>
                 <OwlCarousel className='owl-carousel testimonials thin owl-theme owl-loaded' items={1} loop nav dots={false}  navElement='div' navText={['<i class="icon-left-"></i>', '<i class="icon-right-"></i>']}>
