@@ -3,7 +3,6 @@ import { Fragment, useState, useEffect, useRef } from 'react';
 import Breadcrumb from 'react-bootstrap/Breadcrumb';
 import React from 'react';
 import Isotope from 'isotope-layout';
-import Script from 'next/script';
 
 const galleryData = [
     {
